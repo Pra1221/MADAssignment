@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7455c7">
+  <title>HabitHive — Build Better Days</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#home" class="brand">
+      <span class="brand-mark">h</span>
+      <span>Habit<span class="brand-light">Hive</span></span>
+    </a>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+  </header>
+
+  <main class="container" id="home">
+    <section class="welcome">
+      <p class="eyebrow">YOUR DAILY RESET</p>
+      <h1>Small steps.<br><span>Big changes.</span></h1>
+      <p class="subtext">A little progress every day adds up.</p>
+    </section>
+
+    <section class="date-strip">
+      <div>
+        <p class="eyebrow">TODAY</p>
+        <h2 id="todayLabel">Your day</h2>
+      </div>
+      <div class="date-badge" id="dateBadge">MON</div>
+    </section>
+
+    <section class="progress-card">
+      <div class="progress-copy">
+        <p class="eyebrow">DAILY PROGRESS</p>
+        <h2 id="progressTitle">You're just getting started!</h2>
+        <p id="progressText">Complete a habit to begin your streak.</p>
+      </div>
+      <div class="progress-ring" id="progressRing" role="img" aria-label="0 percent complete">
+        <div class="ring-inner">
+          <strong id="progressPercent">0%</strong>
+          <span>done</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span class="stat-emoji">🔥</span>
+        <p>Best streak</p>
+        <h3 id="bestStreak">0 days</h3>
+      </article>
+      <article class="stat-card">
+        <span class="stat-emoji">✓</span>
+        <p>Completed today</p>
+        <h3 id="completedCount">0 habits</h3>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MAKE IT COUNT</p>
+          <h2>Today's habits</h2>
+        </div>
+        <span id="habitCount" class="count-pill">0 habits</span>
+      </div>
+      <div id="habitList" class="habit-list"></div>
+      <div id="emptyState" class="empty-state">
+        <span class="empty-emoji">🌱</span>
+        <h3>Start with one small habit</h3>
+        <p>Your journey to a better routine starts here.</p>
+      </div>
+    </section>
+
+    <section class="section add-section" id="addHabit">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">A NEW BEGINNING</p>
+          <h2>Add a habit</h2>
+        </div>
+      </div>
+      <form id="habitForm">
+        <label for="habitName">Habit name</label>
+        <input id="habitName" type="text" maxlength="50" placeholder="e.g. Read for 20 minutes" required>
+
+        <label for="habitCategory">Category</label>
+        <select id="habitCategory">
+          <option value="Wellness">Wellness</option>
+          <option value="Fitness">Fitness</option>
+          <option value="Learning">Learning</option>
+          <option value="Mindfulness">Mindfulness</option>
+          <option value="Productivity">Productivity</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="habitEmoji">Choose an icon</label>
+        <select id="habitEmoji">
+          <option value="📚">📚 Reading</option>
+          <option value="💧">💧 Drink water</option>
+          <option value="🏃">🏃 Exercise</option>
+          <option value="🧘">🧘 Mindfulness</option>
+          <option value="✍️">✍️ Journaling</option>
+          <option value="😴">😴 Sleep routine</option>
+          <option value="🎯">🎯 Focus</option>
+          <option value="🌿">🌿 Self care</option>
+          <option value="✨">✨ Other</option>
+        </select>
+
+        <button class="primary-btn" type="submit">+ Create habit</button>
+      </form>
+    </section>
+
+    <section class="section history-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">KEEP SHOWING UP</p>
+          <h2>Last 7 days</h2>
+        </div>
+      </div>
+      <div id="weekHistory" class="week-history"></div>
+    </section>
+
+    <footer>HabitHive · Grow at your own pace. 🌷</footer>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <a href="#home">⌂<span>Today</span></a>
+    <a href="#weekHistory">▦<span>Progress</span></a>
+    <a href="#addHabit">＋<span>Add habit</span></a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>

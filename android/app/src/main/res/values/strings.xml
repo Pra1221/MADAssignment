@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">HabitHive</string>
+    <string name="title_activity_main">HabitHive</string>
+    <string name="package_name">com.friends.habithive</string>
+    <string name="custom_url_scheme">com.friends.habithive</string>
+</resources>
